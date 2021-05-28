@@ -9,10 +9,7 @@ export default class Provinces extends BaseSchema {
       table.string('name').notNullable()
       table.string('capital').notNullable()
       table.string('code').notNullable()
-      table.integer('region_id')
-        .unsigned()
-        .references('regions.id')
-        .notNullable()
+      table.integer('region_id').unsigned().references('regions.id').notNullable()
 
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })

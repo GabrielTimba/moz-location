@@ -47,7 +47,7 @@ const databaseConfig: DatabaseConfig = {
         disableRollbacksInProduction: true,
       },
       seeders: {
-        paths: ['./database/seeders/MainSeeder']
+        paths: ['./database/seeders/MainSeeder'],
       },
       healthCheck: false,
       debug: false,

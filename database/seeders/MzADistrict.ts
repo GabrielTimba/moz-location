@@ -3,74 +3,74 @@ import District from 'App/Models/District'
 import Province from 'App/Models/Province'
 
 export default class MzPDistrictSeeder extends BaseSeeder {
-  public async run () {
-    const uniqueKey='name'
+  public async run() {
+    const uniqueKey = 'name'
 
-    const province = await Province.findByOrFail('code','MZ-A')
+    const province = await Province.findByOrFail('code', 'MZ-A')
     await District.updateOrCreateMany(uniqueKey, [
       {
         name: 'Chimbonila',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Cuamba',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Lago',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Lichinga',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Majune',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Mandimba',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Marrupa',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Maúa',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Mavago',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Mecanhelas',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Mecula',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Metarica',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Muembe',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Ngauma',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Nipepe',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Sanga',
-        provinceId:province.id
+        provinceId: province.id,
       },
     ])
   }

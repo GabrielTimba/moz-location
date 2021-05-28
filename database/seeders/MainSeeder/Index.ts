@@ -13,8 +13,8 @@ export default class IndexSeeder extends BaseSeeder {
 
     await new seeder.default(this.client).run()
   }
-  
-  public async run () {
+
+  public async run() {
     await this.runSeeder(await import('../Region'))
     await this.runSeeder(await import('../Province'))
 

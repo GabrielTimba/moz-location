@@ -3,102 +3,102 @@ import District from 'App/Models/District'
 import Province from 'App/Models/Province'
 
 export default class MzPDistrictSeeder extends BaseSeeder {
-  public async run () {
-    const uniqueKey='name'
+  public async run() {
+    const uniqueKey = 'name'
 
-    const province = await Province.findByOrFail('code','MZ-N')
+    const province = await Province.findByOrFail('code', 'MZ-N')
     await District.updateOrCreateMany(uniqueKey, [
       {
         name: 'Angoche',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Eráti',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Ilha de Moçambique',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Lalaua',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Larde',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Liúpo',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Malema',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Meconta',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Mecubúri',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Memba',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Mogincual',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Mogovolas',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Moma',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Monapo',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Mossuril',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Muecate',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Murrupula',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Nacala-a-Velha',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Nacala Porto',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Nacarôa',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Nampula',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Rapale',
-        provinceId:province.id
+        provinceId: province.id,
       },
       {
         name: 'Ribaué',
-        provinceId:province.id
+        provinceId: province.id,
       },
     ])
   }

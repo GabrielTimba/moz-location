@@ -4,21 +4,23 @@ import Province from 'App/Models/Province'
 
 export default class ProvinceSeeder extends BaseSeeder {
   public async run() {
-    let north_id:number=0,center_id: number=0,south_id: number=0;
+    let northId: number = 0
+    let centerId: number = 0
+    let southId: number = 0
     const uniqueKey = 'name'
 
     const regions = await Region.all()
-    regions.map(region=>{
-      switch(region.name.toUpperCase()) {
+    regions.map((region) => {
+      switch (region.name.toUpperCase()) {
         case 'NORTE':
-          north_id=region.id
-          break;
+          northId = region.id
+          break
         case 'CENTRO':
-          center_id=region.id
-          break;
+          centerId = region.id
+          break
         case 'SUL':
-          south_id=region.id
-          break;
+          southId = region.id
+          break
       }
     })
 
@@ -26,68 +28,68 @@ export default class ProvinceSeeder extends BaseSeeder {
       {
         name: 'Cabo Delgado',
         capital: 'Pemba',
-        code:'MZ-P',
-        regionId:north_id
+        code: 'MZ-P',
+        regionId: northId,
       },
       {
         name: 'Niassa',
         capital: 'Lichinga',
-        code:'MZ-A',
-        regionId:north_id
+        code: 'MZ-A',
+        regionId: northId,
       },
       {
         name: 'Nampula',
         capital: 'Nampula',
-        code:'MZ-N',
-        regionId:north_id
+        code: 'MZ-N',
+        regionId: northId,
       },
       {
         name: 'Tete',
         capital: 'Tete',
-        code:'MZ-T',
-        regionId:center_id
+        code: 'MZ-T',
+        regionId: centerId,
       },
       {
         name: 'Sofala',
         capital: 'Beira',
-        code:'MZ-S',
-        regionId:center_id
+        code: 'MZ-S',
+        regionId: centerId,
       },
       {
         name: 'Zambézia',
         capital: 'Quelimane',
-        code:'MZ-Q',
-        regionId:center_id
+        code: 'MZ-Q',
+        regionId: centerId,
       },
       {
         name: 'Manica',
         capital: 'Chimoio',
-        code:'MZ-B',
-        regionId:center_id
+        code: 'MZ-B',
+        regionId: centerId,
       },
       {
         name: 'Inhambane',
         capital: 'Inhambane',
-        code:'MZ-I',
-        regionId:south_id
+        code: 'MZ-I',
+        regionId: southId,
       },
       {
         name: 'Gaza',
         capital: 'Xai-xai',
-        code:'MZ-G',
-        regionId:south_id
+        code: 'MZ-G',
+        regionId: southId,
       },
       {
         name: 'Maputo',
         capital: 'Matola',
-        code:'MZ-L',
-        regionId:south_id
+        code: 'MZ-L',
+        regionId: southId,
       },
       {
         name: 'Cidade de Maputo',
         capital: '---',
-        code:'MZ-MPM',
-        regionId:south_id
+        code: 'MZ-MPM',
+        regionId: southId,
       },
     ])
   }

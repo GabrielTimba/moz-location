@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column,belongsTo,BelongsTo } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, column, belongsTo, BelongsTo } from '@ioc:Adonis/Lucid/Orm'
 import Province from './Province'
 
 export default class District extends BaseModel {
