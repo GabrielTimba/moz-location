@@ -16,7 +16,7 @@ export default class Province extends BaseModel {
   @column()
   public code: string
 
-  @column()
+  @column({ serializeAs: null })
   public regionId: number
 
   @belongsTo(() => Region)

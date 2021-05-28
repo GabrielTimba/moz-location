@@ -6,3 +6,5 @@ Route.get('/', async () => {
 
 Route.get('/provinces', 'ProvincesController.index')
 Route.get('/province/:code', 'ProvincesController.show')
+
+Route.get('/districts', 'DistrictsController.index')
