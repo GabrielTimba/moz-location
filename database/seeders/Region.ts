@@ -10,10 +10,10 @@ export default class RegionSeeder extends BaseSeeder {
         name: 'sul',
       },
       {
-        name: 'norte',
+        name: 'centro',
       },
       {
-        name: 'centro',
+        name: 'norte',
       },
     ])
   }
