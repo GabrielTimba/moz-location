@@ -7,7 +7,7 @@ export default class Districts extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id').notNullable()
       table.string('name').notNullable()
-      table.integer('provincias_id').references('id').inTable('provinces').notNullable()
+      table.integer('province_id').references('id').inTable('provinces').notNullable()
 
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })

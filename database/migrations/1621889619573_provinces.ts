@@ -7,11 +7,13 @@ export default class Provinces extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
       table.string('name').notNullable()
-      table.integer('region_id').references('id').inTable('regions').notNullable()
+      table.string('capital').notNullable()
+      table.string('code').notNullable()
+      table.integer('region_id')
+        .unsigned()
+        .references('regions.id')
+        .notNullable()
 
-      /**
-       * Uses timestampz for PostgreSQL and DATETIME2 for MSSQL
-       */
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })
