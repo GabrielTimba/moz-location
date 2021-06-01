@@ -1,7 +1,7 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', async () => {
-  return { hello: 'world' }
+  return { hi: 'welcome to mozlocation api' }
 })
 
 Route.get('/provinces', 'ProvincesController.index')
